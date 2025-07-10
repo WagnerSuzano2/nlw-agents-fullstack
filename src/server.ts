@@ -5,7 +5,7 @@ import {
   validatorCompiler,
   type ZodTypeProvider,
 } from 'fastify-type-provider-zod';
-import { sql } from './db/connection.ts';
+//import { sql } from './db/connection.ts';
 import { env } from './env.ts';
 
 const app = fastify().withTypeProvider<ZodTypeProvider>();
@@ -26,6 +26,6 @@ app
     port: env.PORT,
   })
   .then(() => {
-    console.log(`Port: ${env.PORT}`);
-    console.log('HTTP server running');
+   // console.log(`Port: ${env.PORT}`);
+    // console.log('HTTP server running');
   });
